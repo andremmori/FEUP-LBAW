@@ -1,0 +1,593 @@
+/* Centered text */
+body{
+    overflow-x: hidden;
+}
+
+.grayscale{
+    filter: grayscale(30%);
+}
+
+.hyper-link{
+    color: black;
+}
+
+.search-event {
+    position: relative;
+    width: 70%;
+    height: 30%;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.search-box{
+    display: flex;
+    flex-wrap: nowrap;
+    float:left;
+}
+
+.search-location {
+    display: flex;
+    flex-wrap: nowrap;
+    float:left;
+    padding-left: 8%;
+    padding-right: 7%;
+}
+
+.search-date {
+    display: flex;
+    flex-wrap: nowrap;
+    float:left;
+}
+
+.search-button {
+    float:left;
+    padding-left: 15%;
+}
+
+.main-text{
+    font-size:40px;
+    padding-left: 10%;
+}
+
+.main-event {
+    display: flex;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    flex-wrap: nowrap;
+}
+
+.main-2 {
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+.event-bar {
+    display: inline-block;
+    padding: 10px;
+    margin-left: 1%;
+    padding-right: 35%;
+    width: auto;
+}
+
+.event-button {
+    position: relative;
+    float: right;
+    padding-left: 10px;
+}
+
+.event-page {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-content: center;
+    overflow: hidden;
+    padding-top: 1%;
+    padding-bottom: 5%;
+}
+
+.event-advanced {
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    min-width: 200px;
+    width: 20%;
+    margin-left: 2%;
+    margin-right: 5%;
+    margin-bottom: 10px;
+    float: left;
+    background-color: #bbbbbb;
+    border-radius: 5px;
+    overflow-y: auto;
+    overflow-x: inherit;
+}
+
+.event-for {
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    min-width: 400px;
+    height: auto;
+    width: 65%;
+    float: right;
+    margin-left: 2%;
+    margin-bottom: 10px;
+    background-color: #bbbbbb;
+    border-radius: 5px;
+    overflow-y: auto;
+    overflow-x: inherit;
+}
+
+.event-title {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px;
+    padding-left: 20px;
+    float: left;
+}
+
+.event-body {
+    font-weight: bold;
+    padding: 5px;
+    padding-left: 20px;
+    float: left;
+}
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+     display: none;
+     /* Hidden by default */
+     position: fixed;
+     /* Stay in place */
+     z-index: 4;
+     /* Sit on top */
+     left: 0;
+     top: 0;
+     width: 100%;
+     /* Full width */
+     height: 100%;
+     /* Full height */
+     overflow: auto;
+     /* Enable scroll if needed */
+     padding-left: 40%;
+     padding-top: 1%;
+     /* Dim back*/
+     background-color: rgbA(0, 0, 0, 0.5);
+     color: black;
+}
+
+/* Add styles to the form container */
+.form-container {
+    background-color: white;
+    border-style: solid;
+    border-radius: 25px;
+    border-width: 5px;
+    border-color: #006aff;
+}
+
+/* Full-width input fields */
+.form-container input[type=text],
+.form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border-style: solid;
+    background: #eeeeee;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus,
+.form-container input[type=password]:focus {
+    border-style: solid;
+    background-color: #eeeeee;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+    opacity: 1;
+}
+
+.contact-form{
+    padding: 5% 20%;
+}
+
+.profilePage {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 1em;
+    padding-bottom: 10%;
+}
+
+.profilePage .main {
+    width: 30%;
+}
+
+.profileCenter {
+    padding-left: 15%;
+    margin: auto;
+    width: 80%;
+}
+
+.imglabel {
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    color: #fff;
+    bottom: -30%;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    transition:0.1s all;
+    height: 30%;
+}
+
+.img-hov{
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.img-hov:hover .imglabel {
+  bottom: 0px;
+}
+
+.img-item {
+    border-radius: 50%;
+    border: 2px solid #555;
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+}
+
+.img-item img {
+    object-fit: cover;
+}
+
+.uploadPhotoProfile {
+    display: inline-block;
+    padding-top: 30px;
+}
+
+.editProfileForm {
+    max-width: 500px;
+    margin: 50px auto;
+    background: transparent;
+    border-radius: 2px;
+    padding: 20px;
+}
+.editProfileForm h1 {
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0px 0px 20px 0px;
+    background: transparent;
+    font-size: x-large;
+}
+
+.editProfileForm ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.editProfileForm li {
+    display: block;
+    padding: 9px;
+    border: 1px solid #DDDDDD;
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
+
+.editProfileForm li:last-child {
+    border: none;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.editProfileForm li>label {
+    display: block;
+    float: left;
+    margin-top: -31px;
+    background: transparent;
+    height: 14px;
+    color: #B9B9B9;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.editProfileForm genderProfile,
+.editProfileForm input[type="text"],
+.editProfileForm input[type="date"],
+.editProfileForm input[type="datetime"],
+.editProfileForm input[type="email"],
+.editProfileForm input[type="number"],
+.editProfileForm input[type="search"],
+.editProfileForm input[type="time"],
+.editProfileForm input[type="url"],
+.editProfileForm input[type="password"],
+.editProfileForm textarea,
+.editProfileForm select {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    display: block;
+    outline: none;
+    border: none;
+    height: 25px;
+    line-height: 25px;
+    padding: 0;
+    background-color: transparent;
+}
+
+.editProfileForm li>span {
+    background: #b4b4b4;
+    display: block;
+    padding: 3px;
+    margin: 0 -9px -9px -9px;
+    text-align: center;
+    color: #F3F3F3;
+}
+
+.editProfileForm textarea {
+    resize: none;
+}
+
+#button-add,
+.editProfileForm button,
+.editProfileForm input[type="submit"],
+.editProfileForm input[type="button"] {
+    background: #555;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-bottom: 3px solid #000;
+    border-radius: 3px;
+    color: #ffffff;
+}
+
+#button-add:hover,
+.editProfileForm button:hover,
+.editProfileForm input[type="submit"]:hover,
+.editProfileForm input[type="button"]:hover {
+    background: #000;
+    color: #fff;
+}
+
+.owned {
+    display: flex;
+    flex-flow: column wrap;
+    width: 70%;
+    padding-left: 10%;
+}
+
+.related {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0.5em 0;
+}
+
+.owned h1{
+    font-size: 25px;
+}
+
+.eventPage {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-content: center;
+}
+
+.eventPage .container {
+    margin-bottom: 1.6em;
+    background-color: #555;
+    border-radius: 4px;
+    padding: 10px 10px 10px 10px;
+}
+
+.eventPage .container .flexPhotos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.eventPage .container .flexPhotos .flexContainer {
+    width: 47%;
+    height: 150px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.eventPage .main {
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    min-width: 500px;
+    width: 100%;
+}
+
+.eventPage .related {
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    min-width: 500px;
+    width: 100%;
+}
+
+.commentary {
+    font-size:20px;
+}
+
+.faq-body{
+    padding: 5% 10%;
+}
+
+.faq-body h1{
+    width: 100%;
+    padding-bottom: 5%;
+
+}
+
+.faq {
+    display: none;
+    border: 3px solid #3f3f3f;
+    z-index: 1;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.faq h1{
+    font-size:20px;
+}
+
+.about-main{
+    padding: 5% 10%;
+
+}
+
+.about-meethology{
+    padding-top: 3%;
+    padding-bottom: 3%;
+
+}
+
+.profile-card {
+    display: flex;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    flex-wrap: nowrap;
+
+}
+
+.profile-card1 {
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.profile-card2 {
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+
+.createEvent {
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%
+}
+
+.event-flex{
+    display: flex;
+    width: max-content;
+    justify-content: space-between;
+}
+
+.event-box{
+    flex-flow: row wrap;
+}
+
+.admin-page {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-content: center;
+    overflow: hidden;
+    padding-top: 5%;
+    padding-bottom: 6%;
+}
+
+.admin-advanced {
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    min-width: 200px;
+    width: 15%;
+    margin-left: 10px;
+    margin-right: 5%;
+    margin-bottom: 10px;
+    height: 90%;
+    float: left;
+    border: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #DEE2E6;
+    background-color: #F7F7F7;
+    overflow-y: auto;
+    overflow-x: inherit;
+}
+
+.admin-for {
+    display:flex;
+    position: relative;
+    min-width: 200px;
+    margin-right: 5%;
+    height: auto;
+    width: 70%;
+    overflow-y: auto;
+    overflow-x: inherit;
+}
+
+.admin-prom {
+    position: relative;
+    min-width: 200px;
+    height: auto;
+    width: 50%;
+    overflow-y: auto;
+    overflow-x: inherit;
+}
+
+.admin-graphs{
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.my-custom-scrollbar {
+position: relative;
+height: 300px;
+overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+display: block;
+}
+
+.carousel-inner img {
+        width: 100%;
+        height: auto;
+}
